@@ -7,34 +7,34 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
-    <nav className="bg-gray-100 h-[70px] text-white px-6 lg:px-20 py-4 flex items-center justify-between relative">
+    <nav className="bg-zinc-100 h-[70px] text-white px-6 lg:px-20 py-4 flex items-center justify-between relative">
       {/* LOGO */}
       <img src={logo} alt="logo" />
 
       {/* Desktop menu */}
-      <ul className="hidden md:flex md:items-center gap-9 lg:text-lg tracking-wide text-gray-800 font-inter">
+      <ul className="hidden md:flex md:items-center gap-9 lg:text-lg tracking-wide text-zinc-800 font-inter">
         <a href="#" className="relative group">
           <li>
             Inicio
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gray-800 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-zinc-800 transition-all duration-300 group-hover:w-full"></span>
           </li>
         </a>
         <a href="#" className="relative group">
           <li>
             Sobre mi
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gray-800 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-zinc-800 transition-all duration-300 group-hover:w-full"></span>
           </li>
         </a>
         <a href="#" className="relative group">
           <li>
             Proyectos
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gray-800 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-zinc-800 transition-all duration-300 group-hover:w-full"></span>
           </li>
         </a>
         <a href="#" className="relative group">
           <li>
             Contacto
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gray-800 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-zinc-800 transition-all duration-300 group-hover:w-full"></span>
           </li>
         </a>
       </ul>
@@ -48,7 +48,7 @@ const Navbar = () => {
         {isOpen ? (
           <IoClose size={28} />
         ) : (
-          <IoMenu size={28} className="text-gray-800" />
+          <IoMenu size={28} className="text-zinc-800" />
         )}
       </button>
 

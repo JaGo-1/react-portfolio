@@ -3,7 +3,7 @@ import { imgDes } from "../assets";
 const Home = () => {
   return (
     <section
-      className="bg-gray-100 text-gray-800 px-8 lg:px-20 flex justify-between"
+      className="bg-zinc-100 text-zinc-800 px-8 lg:px-20 flex justify-between"
       style={{ height: "calc(100vh - 70px)" }}
     >
       <div className=" text-center md:text-start flex flex-col items-center md:items-start justify-center">
@@ -11,10 +11,10 @@ const Home = () => {
           <h3 className="font-inter text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             Hi! I'm a
           </h3>
-          <h1 className="font-srcpro max-w-5xl font-medium text-5xl md:text-6xl lg:text-8xl xl:text-9xl">
+          <h1 className="font-srcpro md:max-w-xl max-w-5xl font-medium text-5xl md:text-6xl lg:text-8xl xl:text-9xl">
             Software Developer
           </h1>
-          <p className="font-inter md:text-xl xl:text-2xl max-w-2xl">
+          <p className="font-inter md:text-xl xl:text-2xl md:max-w-xl max-w-2xl">
             I'm Jacqueline and I'm a software developer focused on front-end and
             design.
           </p>
