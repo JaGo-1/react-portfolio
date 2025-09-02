@@ -43,10 +43,10 @@ const TopInfo = () => {
 
 const Works = () => {
   return (
-    <section className="w-full bg-zinc-100 lg:px-20">
+    <section className="w-full bg-zinc-100 lg:px-20 ">
       <TopInfo />
       {/* Project Section */}
-      <div className="bg-zinc-100 px-5 py-20 md:py-30">
+      <div id="proyectos" className="bg-zinc-100 px-5 py-20 md:py-30">
         <h5 className="text-4xl font-medium font-srcpro text-zinc-900 text-center md:text-left md:text-5xl lg:text-6xl xl:text-7xl  mb-10 md:mb-20">
           Proyectos.
         </h5>
