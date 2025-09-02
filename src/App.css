@@ -3,8 +3,22 @@
 
 /* Tailwind */
 @import "tailwindcss";
-
+html {
+  scroll-behavior: smooth;
+}
 @theme {
   --font-inter: "Inter", sans-serif;
   --font-srcpro: "Source Code Pro", monospace;
+
+  --animate-pulse: pulse 1s ease-in-out 2;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }

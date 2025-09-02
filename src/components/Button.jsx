@@ -1,7 +1,4 @@
-import React from "react";
-
-const Button = ({ text, variant = "light" }) => {
-  // Definimos los estilos por variante
+const Button = ({ text, variant = "light", href }) => {
   const variants = {
     light: {
       bgColor: "bg-zinc-900",
@@ -23,14 +20,14 @@ const Button = ({ text, variant = "light" }) => {
     variants[variant];
 
   return (
-    <button
+    <a
+      href={href}
+      target="_blank"
       className={`learn-more relative inline-flex items-center w-55 h-12 cursor-pointer outline-none border-0 bg-transparent p-0 font-semibold uppercase tracking-wide ${textColor} group overflow-hidden`}
     >
-      {/* Círculo */}
       <span
         className={`circle relative block w-12 h-12 ${bgColor} rounded-full transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-full`}
       >
-        {/* Flecha */}
         <span
           className={`icon arrow absolute top-1/2 left-2 w-4 h-[2px] ${iconColor} -translate-y-1/2 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:translate-x-4`}
         >
@@ -39,13 +36,13 @@ const Button = ({ text, variant = "light" }) => {
           ></span>
         </span>
       </span>
-      {/* Texto */}
+
       <span
         className={`font-srcpro button-text absolute inset-0 flex items-center justify-center ml-8 ${textColor} transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] ${hoverTextColor}`}
       >
         {text}
       </span>
-    </button>
+    </a>
   );
 };
 
