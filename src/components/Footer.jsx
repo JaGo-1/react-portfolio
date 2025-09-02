@@ -54,7 +54,11 @@ const Footer = () => {
           <span className="inline-block w-24 h-[1px] bg-zinc-400 align-middle ml-3"></span>
         </h3>
         {/* Contact button */}
-        <Button text="Contáctame" variant="dark" />
+        <Button
+          text="Contáctame"
+          href="https://www.linkedin.com/in/jacquelineegomez22/"
+          variant="dark"
+        />
         {/* Social media */}
         <div className="flex gap-6 text-2xl">
           {socialLinks.map(({ href, label, icon }) => (
@@ -75,7 +79,10 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <img src={ellipse} className="absolute right-0 bottom-0" />
+      <img
+        src={ellipse}
+        className="hidden md:block absolute right-0 bottom-0"
+      />
     </footer>
   );
 };

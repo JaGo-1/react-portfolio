@@ -79,11 +79,12 @@ const Works = () => {
             <a
               href="https://ubifacil.vercel.app/"
               target="_blank"
+              rel="noopener noreferrer"
               className="relative group w-fit font-srcpro"
             >
-              <a className="bg-zinc-900 text-zinc-100 py-3 px-6 lg:text-lg xl:text-xl rounded-full transition-colors duration-200 hover:bg-zinc-800">
+              <p className="bg-zinc-900 text-zinc-100 py-3 px-6 lg:text-lg xl:text-xl rounded-full transition-colors duration-200 hover:bg-zinc-800">
                 Ver Proyecto
-              </a>
+              </p>
             </a>
           </div>
         </div>
