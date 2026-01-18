@@ -3,49 +3,57 @@ import { imgDes, cv } from "../assets";
 
 const Home = () => {
   return (
-    <section
-      className="bg-zinc-100 text-zinc-800 px-8 lg:px-20 flex justify-between"
-      style={{ height: "calc(100vh - 70px)" }}
-    >
-      <div className=" w-full text-center md:text-start flex flex-col items-center md:items-start justify-center">
-        <div className=" flex flex-col gap-5 mb-5">
-          <h3 className="font-inter text-xl md:text-2xl lg:text-3xl xl:text-4xl">
-            Jacqueline Gomez
-          </h3>
-          <h1 className="font-srcpro font-medium text-4xl md:text-5xl xl:text-8xl 2xl:text-9xl max-w-3xl">
-            Full-stack Developer
+    <section className="h-dvh bg-background text-text-primary  flex justify-between">
+      <div className="w-full text-center md:text-start flex flex-col gap-5 items-center md:items-start justify-between py-20">
+        <div className="h-full flex justify-center flex-col gap-10 mb-5 px-8 xl:px-20">
+          <h1 className="flex flex-col md:flex-row gap-4 font-anton-regular uppercase font-medium text-6xl md:text-5xl xl:text-8xl 2xl:text-11xl">
+            <span>Frontend</span>
+            <span className="text-secondary hidden md:inline text-2xl md:text-4xl xl:text-7xl 2xl:text-9xl leading-none">
+              ✦
+            </span>
+            <span>Developer</span>
           </h1>
-          <p className="font-inter md:text-xl xl:text-2xl md:max-w-xl max-w-2xl">
-            Transformo ideas en software funcional y profesional.
+          <p className="xl:mt-10 font-srcpro text-text-primary/60 md:text-xl xl:text-4xl md:max-w-2xl max-w-xl tracking-widest">
+            ¡Hola! Soy Jacqueline, Frontend Developer y Diseñadora UI.
           </p>
         </div>
-        <Button
-          text="Contáctame"
-          href="https://www.linkedin.com/in/jacquelineegomez22/"
-        />
-        <div className="flex flex-wrap justify-center md:justify-start gap-3 font-srcpro uppercase mt-20">
-          <a href="https://github.com/JaGo-1" target="_blank">
-            GitHub
-          </a>
-          <span>/</span>
-          <a
-            href="https://www.linkedin.com/in/jacquelineegomez22/"
-            target="_blank"
-          >
-            LinkedIn
-          </a>
-          <span>/</span>
-          <a href={cv} target="_blank" rel="noopener noreferrer">
-            Descargar CV
-          </a>
+
+        <div className="w-full space-y-10">
+          <div className="flex justify-center md:justify-between w-full px-8 xl:px-20 tracking-wider">
+            <div className="flex flex-wrap justify-center md:justify-start gap-3 font-srcpro uppercase mt-20">
+              <a href="https://github.com/JaGo-1" target="_blank">
+                GitHub
+              </a>
+              <span>/</span>
+              <a
+                href="https://www.linkedin.com/in/jacquelineegomez22/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+              <span>/</span>
+              <a href={cv} target="_blank" rel="noopener noreferrer">
+                Descargar CV
+              </a>
+            </div>
+            <div className="hidden md:flex flex-wrap justify-center md:justify-start gap-3 font-srcpro uppercase mt-20">
+              <p>UI Design</p>
+              <span>/</span>
+              <p>Frontend</p>
+              <span>/</span>
+              <p>Responsive</p>
+            </div>
+            <div className="hidden xl:flex flex-wrap justify-center md:justify-start gap-3 font-srcpro uppercase mt-20">
+              <p>Modern</p>
+              <span>/</span>
+              <p>Creative</p>
+              <span>/</span>
+              <p>Quality</p>
+            </div>
+          </div>
+          <div class="w-full border-t border-white/30"></div>
         </div>
       </div>
-
-      <img
-        src={imgDes}
-        alt="ilustracion"
-        className="hidden md:block w-60 lg:w-80 xl:w-110"
-      />
     </section>
   );
 };

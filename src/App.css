@@ -1,18 +1,42 @@
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+/* =========================================================
+   GOOGLE FONTS
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
-/* Tailwind */
+/* =========================================================
+   TAILWIND IMPORT
+   ========================================================= */
 @import "tailwindcss";
-html {
-  scroll-behavior: smooth;
-}
+
+/* =========================================================
+   VARIABLES DE DISEÑO (GUÍA DE ESTILOS)
+   ========================================================= */
 @theme {
+  /* ------------------------------
+     COLORES PRINCIPALES
+     ------------------------------ */
+  --color-text-primary: #e6e6e6;
+  --color-background: #000000;
+  --color-secondary: #5667ff;
+
+  /* ------------------------------
+     TIPOGRAFÍAS
+     ------------------------------ */
   --font-inter: "Inter", sans-serif;
   --font-srcpro: "Source Code Pro", monospace;
+  --font-anton-regular: "Anton", sans-serif;
 
+  --text-11xl: 200px;
+
+  /* ------------------------------
+     ANIMACIONES
+     ------------------------------ */
   --animate-pulse: pulse 1s ease-in-out 2;
 }
 
+/* =========================================================
+   KEYFRAMES
+   ========================================================= */
 @keyframes pulse {
   0%,
   100% {
@@ -21,4 +45,11 @@ html {
   50% {
     opacity: 0.5;
   }
+}
+
+/* =========================================================
+   REGLAS GENERALES
+   ========================================================= */
+html {
+  scroll-behavior: smooth;
 }
