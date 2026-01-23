@@ -12,9 +12,9 @@ function App() {
       <FaviconSwitcher />
       <Navbar />
       <Home />
-      <Works />
+      {/* <Works />
       <About />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

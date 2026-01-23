@@ -30,7 +30,7 @@ const Footer = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 1 }
+      { threshold: 1 },
     );
 
     if (footerRef.current) {

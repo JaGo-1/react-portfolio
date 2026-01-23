@@ -1,47 +1,37 @@
-const Button = ({ text, variant = "light", href }) => {
-  const variants = {
-    light: {
-      bgColor: "bg-zinc-900",
-      textColor: "text-zinc-900",
-      hoverTextColor: "group-hover:text-white",
-      iconColor: "bg-white",
-      arrowColor: "border-white",
-    },
-    dark: {
-      bgColor: "bg-white",
-      textColor: "text-white",
-      hoverTextColor: "group-hover:text-zinc-900",
-      iconColor: "bg-zinc-900",
-      arrowColor: "border-zinc-900",
-    },
-  };
-
-  const { bgColor, textColor, hoverTextColor, iconColor, arrowColor } =
-    variants[variant];
-
+/**
+ * Styled button component.
+ *
+ * The roll animation is achieved by duplicating the title text and using CSS transforms (translate/skew)
+ * to swap the two elements on hover.
+ *
+ * @param {object} props
+ * @param {string} props.id - HTML id attribute for the button.
+ * @param {string} props.title - The text displayed on the button.
+ * @param {React.ReactNode} [props.rightIcon] - Optional icon to display next to the title.
+ * @param {string} [props.containerClass] - Additional Tailwind classes for button styling (e.g., color, padding).
+ */
+const Button = ({ id, title, rightIcon, containerClass, to }) => {
   return (
     <a
-      href={href}
-      target="_blank"
-      className={`learn-more relative inline-flex items-center w-55 h-12 cursor-pointer outline-none border-0 bg-transparent p-0 font-semibold uppercase tracking-wide ${textColor} group overflow-hidden`}
+      id={id}
+      href={to}
+      className={`group relative w-fit cursor-pointer overflow-hidden rounded-full px-5 py-2 border-1 z-30  border-white-regular ${containerClass}`}
     >
-      <span
-        className={`circle relative block w-12 h-12 ${bgColor} rounded-full transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-full`}
-      >
-        <span
-          className={`icon arrow absolute top-1/2 left-2 w-4 h-[2px] ${iconColor} -translate-y-1/2 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:translate-x-4`}
-        >
-          <span
-            className={`absolute top-[-4px] right-[1px] w-2.5 h-2.5 border-t-2 border-r-2 ${arrowColor} rotate-45`}
-          ></span>
-        </span>
+      {/* Wrapper to control text overflow and isolation */}
+      <span className="relative inline-flex overflow-hidden text-xs tracking-widest uppercase">
+        {/* Visible Text (Slides Out on hover) */}
+        <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12">
+          {title}
+        </div>
+
+        {/* Hidden Text (Slides In on hover) */}
+        {/* Initial position is far below and skewed. On hover, it snaps to visible (translate-y-0, skew-y-0). */}
+        <div className="absolute translate-y-[164%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
+          {title}
+        </div>
       </span>
 
-      <span
-        className={`font-srcpro button-text absolute inset-0 flex items-center justify-center ml-8 ${textColor} transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] ${hoverTextColor}`}
-      >
-        {text}
-      </span>
+      {rightIcon}
     </a>
   );
 };
