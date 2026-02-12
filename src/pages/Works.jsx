@@ -1,4 +1,3 @@
-import { ubifacil } from "../assets";
 import { FaFigma, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import HoverTooltip from "../components/HoverTooltip";
@@ -53,11 +52,11 @@ const Works = () => {
         <div className="mx-auto grid md:grid-cols-2 gap-12 items-start mt-5">
           {/* Image */}
           <div className="shadow-lg overflow-hidden h-full">
-            <img
+            {/* <img
               src={ubifacil}
               alt="Ubifacil project picture"
               className="w-full h-full object-cover"
-            />
+            /> */}
           </div>
 
           {/* Description */}

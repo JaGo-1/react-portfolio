@@ -8,14 +8,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <FaviconSwitcher />
       <Navbar />
       <Home />
       {/* <Works />
       <About />
       <Footer /> */}
-    </>
+    </div>
   );
 }
 
