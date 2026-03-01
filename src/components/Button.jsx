@@ -1,39 +1,47 @@
-/**
- * Styled button component.
- *
- * The roll animation is achieved by duplicating the title text and using CSS transforms (translate/skew)
- * to swap the two elements on hover.
- *
- * @param {object} props
- * @param {string} props.id - HTML id attribute for the button.
- * @param {string} props.title - The text displayed on the button.
- * @param {React.ReactNode} [props.rightIcon] - Optional icon to display next to the title.
- * @param {string} [props.containerClass] - Additional Tailwind classes for button styling (e.g., color, padding).
- */
-const Button = ({ id, title, rightIcon, containerClass, to }) => {
+export const Button = ({
+  title,
+  href,
+  onClick,
+  download,
+  type = "button",
+  className = "",
+}) => {
+  const Tag = href ? "a" : "button";
+
+  const commonProps = {
+    className: `inline-block cursor-pointer relative text-sm xl:text-xl py-4 px-10 
+                text-white font-srcpro uppercase tracking-[0.2em] font-medium 
+                overflow-hidden bg-zinc-900 transition-colors duration-500 
+                ease-in-out hover:text-black z-10 group ${className}`,
+  };
+
+  const renderContent = () => (
+    <>
+      <span className="relative z-20">{title}</span>
+      <div
+        className="absolute top-0 -left-full w-full h-full bg-white 
+                    transition-all duration-500 ease-in-out z-0 group-hover:left-0"
+      ></div>
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        {...commonProps}
+        href={href}
+        download={download}
+        target={href.startsWith("http") ? "_blank" : undefined}
+        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+      >
+        {renderContent()}
+      </a>
+    );
+  }
+
   return (
-    <a
-      id={id}
-      href={to}
-      className={`group relative w-fit cursor-pointer overflow-hidden rounded-full px-5 py-2 border-1 z-30  border-white-regular ${containerClass}`}
-    >
-      {/* Wrapper to control text overflow and isolation */}
-      <span className="relative inline-flex overflow-hidden text-xs tracking-widest uppercase">
-        {/* Visible Text (Slides Out on hover) */}
-        <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12">
-          {title}
-        </div>
-
-        {/* Hidden Text (Slides In on hover) */}
-        {/* Initial position is far below and skewed. On hover, it snaps to visible (translate-y-0, skew-y-0). */}
-        <div className="absolute translate-y-[164%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-          {title}
-        </div>
-      </span>
-
-      {rightIcon}
-    </a>
+    <button {...commonProps} type={type} onClick={onClick}>
+      {renderContent()}
+    </button>
   );
 };
-
-export default Button;

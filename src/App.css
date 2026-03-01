@@ -1,8 +1,7 @@
 /* =========================================================
    GOOGLE FONTS
    ========================================================= */
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 /* =========================================================
    TAILWIND IMPORT
    ========================================================= */
@@ -24,7 +23,6 @@
      ------------------------------ */
   --font-inter: "Inter", sans-serif;
   --font-srcpro: "Source Code Pro", monospace;
-  --font-anton-regular: "Anton", sans-serif;
 
   --text-11xl: 200px;
 
@@ -48,8 +46,10 @@
 }
 
 /* =========================================================
-   REGLAS GENERALES
+   ESTILOS BASE
    ========================================================= */
-html {
-  scroll-behavior: smooth;
+@layer components {
+  .section-title {
+    @apply text-xs opacity-50 font-srcpro text-text-primary uppercase tracking-widest;
+  }
 }
