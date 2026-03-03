@@ -7,16 +7,21 @@ const CustomCursor = () => {
   const { cursorType, cursorText, mouseEnter, mouseLeave } = useCursor();
 
   useLayoutEffect(() => {
-    const onMouseMove = (e) => {
-      gsap.to(cursorRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.1,
-        ease: "power2.out",
-      });
-    };
-    window.addEventListener("mousemove", onMouseMove);
-    return () => window.removeEventListener("mousemove", onMouseMove);
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1024px)", () => {
+      const onMouseMove = (e) => {
+        gsap.to(cursorRef.current, {
+          x: e.clientX,
+          y: e.clientY,
+          duration: 0.1,
+          ease: "power2.out",
+        });
+      };
+      window.addEventListener("mousemove", onMouseMove);
+      return () => window.removeEventListener("mousemove", onMouseMove);
+    });
+    return () => mm.revert();
   }, []);
 
   useEffect(() => {
@@ -59,7 +64,7 @@ const CustomCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 pointer-events-none z-[9999] flex items-center justify-center -translate-x-1/2 -translate-y-1/2 mix-blend-difference bg-white rounded-full"
+      className="hidden fixed top-0 left-0 pointer-events-none z-[9999] lg:flex items-center justify-center -translate-x-1/2 -translate-y-1/2 mix-blend-difference bg-white rounded-full"
     >
       {cursorText && (
         <span className="text-[10px] text-black font-bold uppercase tracking-tighter">
