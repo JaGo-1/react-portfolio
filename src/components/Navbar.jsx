@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { logo } from "../assets/index";
+import { logo, logoMobile } from "../assets/index";
 import StaggeredMenu from "./StaggeredMenu";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
@@ -8,10 +8,10 @@ const Navbar = () => {
   const navRef = useRef(null);
 
   const menuItems = [
-    { label: "Home", ariaLabel: "Go to home page", link: "/" },
-    { label: "About", ariaLabel: "Learn about us", link: "/about" },
-    { label: "Work", ariaLabel: "View our work", link: "/work" },
-    { label: "Contact", ariaLabel: "Get in touch", link: "/contact" },
+    { label: "Inicio", ariaLabel: "Ir a la página principal", link: "/#" },
+    { label: "Conóceme", ariaLabel: "Sobre mí", link: "/#about" },
+    { label: "Proyectos", ariaLabel: "Ver proyectos", link: "/#work" },
+    { label: "Contacto", ariaLabel: "Contacto", link: "/#contact" },
   ];
 
   const socialItems = [
@@ -45,14 +45,14 @@ const Navbar = () => {
           items={menuItems}
           socialItems={socialItems}
           displaySocials
-          displayItemNumbering={true}
+          displayItemNumbering={false}
           menuButtonColor="#ffffff"
           openMenuButtonColor="#000000"
           changeMenuColorOnOpen={true}
-          colors={["#818dfc", "#5667FF"]}
+          colors={["var(--color-darkGray)", "var(--color-lightGray)"]}
           logoUrl={logo}
-          logoMobileUrl="logo-dark.svg"
-          accentColor="#5667FF"
+          logoMobileUrl={logoMobile}
+          accentColor="var(--color-darkGray)"
         />
       </div>
     </div>

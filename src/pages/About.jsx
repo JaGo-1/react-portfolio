@@ -52,6 +52,7 @@ const About = () => {
 
   return (
     <section
+      id="about"
       ref={containerRef}
       className=" bg-background min-h-screen flex items-center"
     >

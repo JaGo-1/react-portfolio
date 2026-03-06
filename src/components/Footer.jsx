@@ -25,6 +25,7 @@ const Footer = () => {
   useScrollReveal(containerRef, ".reveal-text");
   return (
     <footer
+      id="contact"
       ref={containerRef}
       className="z-0 relative bg-background text-text-primary w-full lg:h-screen"
     >
