@@ -2,6 +2,7 @@ import Card from "../components/Card";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { works } from "../data/workData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,15 +38,8 @@ const Works = () => {
     return () => ctx.revert();
   }, []);
 
-  const works = [
-    {
-      title: "00. rawframe",
-      type: "landing page",
-      img: "",
-    },
-  ];
   return (
-    <section className="w-full bg-background">
+    <section id="work" className="w-full bg-background">
       <div id="proyectos" className="px-8 xl:px-20 py-20 md:py-30">
         <div className="flex justify-between mb-12">
           <h5 className="section-title">[ Work ]</h5>
