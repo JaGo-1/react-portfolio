@@ -1,12 +1,46 @@
-# React + Vite
+# Jacqueline Gomez — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-end personal portfolio built with a focus on technical precision, aesthetic clarity, and smooth interactions. This project serves as a digital lab to explore the intersection between clean code and immersive user experiences.
 
-Currently, two official plugins are available:
+[Live Demo](https://jacquelinegomezportfolio.vercel.app/) | [LinkedIn](https://www.linkedin.com/in/jacquelineegomez22/?locale=es-ES)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Portfolio](src/assets/thumbnail.png)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 01. Tech Stack
+| Category | Technology |
+| :--- | :--- |
+| **Framework** | **React** (Hooks & Functional Components) |
+| **Styling** | **Tailwind CSS** (Custom Utility-first system) |
+| **Animation** | **GSAP** + **ScrollTrigger** (Orchestrated motion) |
+| **Language** | **JavaScript (JS)** |
+
+## 02. Key Features
+* **Custom Motion Engine**: Advanced use of GSAP for non-intrusive, narrative-driven animations.
+* **Global Interaction State**: Managed via React Context for synchronized cursor behaviors across the app.
+* **Modular Data Management**: Centralized project information for scalable maintenance and clean separation of concerns.
+* **Adaptive UX**: Intelligent navigation and interaction systems that prioritize content visibility.
+
+## 03. Project Structure
+```text
+src/
+ ├── assets/      # Optimized assets & global styles
+ ├── components/  # Atomic UI elements & Layout wrappers
+ ├── context/     # React Context providers (Cursor & Global state)
+ ├── data/        # Centralized project data & work descriptions
+ ├── hooks/       # Custom hooks (Time logic, GSAP animations)
+ └── pages/       # Main view components and routing
+ ```
+
+ ## 04. Installation
+ ```bash
+# Clone the repository
+git clone https://github.com/JaGo-1/react-portfolio.git
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+ ```
