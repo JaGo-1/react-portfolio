@@ -66,9 +66,9 @@ const About = () => {
           ref={textRef}
           className="font-srcpro text-text-primary text-3xl xl:text-5xl w-full md:w-2/3 leading-tight"
         >
-          Soy Jacqueline, desarrolladora frontend y diseñadora UI. Construyo
-          interfaces y productos digitales con código limpio y una experiencia
-          de usuario que realmente aporta valor.
+          Soy Jacqueline, desarrolladora Frontend y diseñadora UI. Construyo
+          productos digitales cuidando tanto la semántica del código como los
+          detalles visuales de la interfaz.
         </p>
         <div className="flex flex-wrap gap-10 gap-x-32 justify-between mt-16">
           <div className="reveal-item ">

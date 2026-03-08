@@ -51,7 +51,8 @@ const Home = () => {
 
         <div className="hero-content mt-10">
           <p className="font-srcpro text-text-primary/40 md:text-lg max-w-2xl tracking-[0.2em] capitalize">
-            /* Transformo ideas complejas en interfaces simples y funcionales */
+            /* Diseño y desarrollo de interfaces bajo estándares modernos de la
+            web */
           </p>
         </div>
       </div>

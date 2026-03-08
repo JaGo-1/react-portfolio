@@ -58,10 +58,10 @@ const WorkInfo = ({ project, infoRef }) => {
 
           <div className="md:col-span-2 space-y-2">
             <h4 className=" uppercase tracking-tighter font-semibold">
-              Tech Stack
+              Tech Core
             </h4>
             <div className="flex flex-wrap gap-2 pt-1">
-              {project.techStack?.map((tech) => (
+              {project.techCore?.map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-white/80"
