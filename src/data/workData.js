@@ -28,7 +28,7 @@ export const works = [
     solution:
       "Desarrollo de una arquitectura modular basada en Custom Hooks para separar la lógica de negocio de la UI. Implementación de 'Debouncing' para optimizar las peticiones a la API y uso de Framer Motion para micro-interacciones.",
     techCore: ["React", "Framer Motion", "OpenWeather API", "Custom Hooks"],
-    demoUrl: "https://weather-lppjwqhio-ja-gos-projects.vercel.app/",
+    demoUrl: "https://skyviewapp.vercel.app/",
     repoUrl: "https://github.com/JaGo-1/weather-react-app.git",
   },
 ];
